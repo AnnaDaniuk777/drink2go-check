@@ -2,6 +2,14 @@
   display: none;
 
   @media (min-width: $desktop-width) {
-    display: block;
+    display: inline-block;
+    margin: 0;
+    color: $base-black;
+    font-size: 12px;
+    line-height: 16px;
   }
+}
+
+.logo__img {
+  display: block;
 }

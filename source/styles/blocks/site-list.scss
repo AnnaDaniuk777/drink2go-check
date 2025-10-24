@@ -1,0 +1,62 @@
+.site-list {
+  @include reset;
+  display: block;
+
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    top: 61px;
+    left: 0;
+    right: 0;
+    background: $base-white;
+    z-index: 1;
+    flex-direction: column;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include flex-between;
+  }
+}
+
+.site-list__button {
+  text-decoration: none;
+  color: $base-black;
+  display: inline-block;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 16px;
+  position: relative;
+
+  &--active::after {
+    @media (min-width: $tablet-width) {
+      @include pseudo;
+      background-color: $base-purple;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    display: block;
+    padding: 20px;
+    text-align: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 32px 20px;
+  }
+}
+
+.site-list__item {
+  @media (max-width: $mobile-width-only) {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid $base-light-purple;
+
+    &:first-child {
+      border-top: 1px solid $base-light-purple;
+    }
+  }
+}
