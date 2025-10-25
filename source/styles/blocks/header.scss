@@ -10,8 +10,8 @@
   @include flex-between;
 
   @media (max-width: $mobile-width-only) {
-    padding: 12px 20px;
     position: relative;
+    padding-right: 60px;
   }
 
   @media (min-width: $tablet-width) {

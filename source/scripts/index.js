@@ -1,19 +1,9 @@
 /* в этот файл добавляет скрипты*/
-function toggleMenu() {
-  const navMain = document.querySelector('.main-nav');
-  const navToggle = document.querySelector('.main-nav__toggle');
+import { toggleMenu } from './mobile-menu.js';
+import { initSlider } from './slider.js';
 
-  navMain.classList.add('main-nav--closed');
+document.addEventListener('DOMContentLoaded', () => {
+  toggleMenu();
+  initSlider();
+});
 
-  navToggle.addEventListener('click', () => {
-    if (navMain.classList.contains('main-nav--closed')) {
-      navMain.classList.remove('main-nav--closed');
-      navMain.classList.add('main-nav--opened');
-    } else {
-      navMain.classList.add('main-nav--closed');
-      navMain.classList.remove('main-nav--opened');
-    }
-  });
-}
-
-toggleMenu();

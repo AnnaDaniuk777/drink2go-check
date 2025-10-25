@@ -15,7 +15,7 @@
 </head>
 
 <body class="page__body">
-  <header class="header">
+  <header class="header" data-test="header">
     <div class="header__container container">
       <div class="header__menu-wrapper">
         <a class="header__logo logo" href="index.html">
@@ -63,13 +63,13 @@
     </div>
   </header>
   <main class="main-content">
-    <section class="hero" data-test="hero">
+    <section class="hero hero--biege hero--lavender hero--grey" data-test="hero">
       <div class="hero__container container">
-        <div class="hero__slider-item hero__slider-item--active">
+        <div class="hero__slider-item hero__slider-item--biege hero__slider-item--active">
           <div class="hero__content-wrapper">
             <span class="hero__text">Новинка!</span>
             <h1 class="hero__title">Декаф Флэт Уайт</h1>
-            <p class="hero__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+            <p class="hero__description">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком — то, что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
             <div class="hero__order-wrapper">
               <p class="hero__info">
                 <span class="hero__old-price">295₽</span>
@@ -78,29 +78,129 @@
               <button class="hero__order-button button" type="button">Заказать</button>
             </div>
           </div>
-          <picture>
-            <source type="image/webp" media="(min-width: 1440px)" srcset="images/flat-white-desktop@1x.webp, images/flat-white-desktop@2x.webp 2x" width="600" height="600">
-            <source type="image/webp" media="(min-width: 768px)" srcset="images/flat-white-tablet@1x.webp, images/flat-white-tablet@2x.webp 2x" width="476" height="476">
-            <source type="image/webp" srcset="images/flat-white-mobile@1x.webp, images/flat-white-mobile@2x.webp 2x" width="280" height="280">
-            <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/flat-white-desktop@1x.png, images/flat-white-desktop@2x.png 2x">
-            <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/flat-white-tablet@1x.png, images/flat-white-tablet@2x.png 2x">
-            <img class="hero__image" src="images/flat-white-mobile@1x.png" srcset="images/flat-white-mobile@2x.png 2x" width="280" height="280" alt="Декаф Флэт Уайт">
-          </picture>
+          <div class="hero__image-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="images/flat-white-desktop@1x.webp, images/flat-white-desktop@2x.webp 2x" width="600" height="600">
+              <source type="image/webp" media="(min-width: 768px)" srcset="images/flat-white-tablet@1x.webp, images/flat-white-tablet@2x.webp 2x" width="476" height="476">
+              <source type="image/webp" srcset="images/flat-white-mobile@1x.webp, images/flat-white-mobile@2x.webp 2x" width="280" height="280">
+              <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/flat-white-desktop@1x.png, images/flat-white-desktop@2x.png 2x">
+              <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/flat-white-tablet@1x.png, images/flat-white-tablet@2x.png 2x">
+              <img class="hero__image" src="images/flat-white-mobile@1x.png" srcset="images/flat-white-mobile@2x.png 2x" width="280" height="280" alt="Декаф Флэт Уайт">
+            </picture>
+          </div>
         </div>
+
+        <div class="hero__slider-item hero__slider-item--lavender">
+          <div class="hero__content-wrapper">
+            <span class="hero__text">Новинка!</span>
+            <h1 class="hero__title">Лавандовый Латте</h1>
+            <p class="hero__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+            <div class="hero__order-wrapper">
+              <p class="hero__info">
+                <span class="hero__old-price">285₽</span>
+                <span class="hero__price">265₽</span>
+              </p>
+              <button class="hero__order-button button" type="button">Заказать</button>
+            </div>
+          </div>
+          <div class="hero__image-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="images/lavender-desktop@1x.webp, images/lavender-desktop@2x.webp 2x" width="600" height="600">
+              <source type="image/webp" media="(min-width: 768px)" srcset="images/lavender-tablet@1x.webp, images/lavender-tablet@2x.webp 2x" width="476" height="476">
+              <source type="image/webp" srcset="images/lavender-mobile@1x.webp, images/lavender-mobile@2x.webp 2x" width="280" height="280">
+              <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/lavender-desktop@1x.png, images/lavender-desktop@2x.png 2x">
+              <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/lavender-tablet@1x.png, images/lavender-tablet@2x.png 2x">
+              <img class="hero__image" src="images/lavender-mobile@1x.png" srcset="images/lavender-mobile@2x.png 2x" width="280" height="280" alt="Лавандовый Латте">
+            </picture>
+          </div>
+        </div>
+
+        <div class="hero__slider-item hero__slider-item--grey">
+          <div class="hero__content-wrapper">
+            <span class="hero__text">Новинка!</span>
+            <h1 class="hero__title">Тройной Эспрессо</h1>
+            <p class="hero__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+            <div class="hero__order-wrapper">
+              <p class="hero__info">
+                <span class="hero__old-price">395₽</span>
+                <span class="hero__price">375₽</span>
+              </p>
+              <button class="hero__order-button button" type="button">Заказать</button>
+            </div>
+          </div>
+          <div class="hero__image-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="images/espresso-desktop@1x.webp, images/espresso-desktop@2x.webp 2x" width="600" height="600">
+              <source type="image/webp" media="(min-width: 768px)" srcset="images/espresso-tablet@1x.webp, images/espresso-tablet@2x.webp 2x" width="476" height="476">
+              <source type="image/webp" srcset="images/espresso-mobile@1x.webp, images/espresso-mobile@2x.webp 2x" width="280" height="280">
+              <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/espresso-desktop@1x.png, images/espresso-desktop@2x.png 2x">
+              <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/espresso-tablet@1x.png, images/espresso-tablet@2x.png 2x">
+              <img class="hero__image" src="images/espresso-mobile@1x.png" srcset="images/espresso-mobile@2x.png 2x" width="280" height="280" alt="Тройной Эспрессо">
+            </picture>
+          </div>
+        </div>
+
       </div>
-      <div class="hero__slider slider">
-        <button class="button slider__button slider-button-prev" type="button">
-          <svg class="slider__left-button" width="20" height="20">
-            <use href="icons/stack.svg#slider-left"></use>
-          </svg>
-          <span class="visually-hidden">Посмотреть предыдущий слайд</span>
+
+      <button class="button slider__button slider-button-prev" type="button">
+        <svg class="slider__left-button" width="20" height="20">
+          <use href="icons/stack.svg#slider-left"></use>
+        </svg>
+        <span class="visually-hidden">Посмотреть предыдущий слайд</span>
+      </button>
+      <button class="button slider__button slider-button-next" type="button">
+        <svg class="slider__right-button" width="20" height="20">
+          <use href="icons/stack.svg#slider-right"></use>
+        </svg>
+        <span class="visually-hidden">Посмотреть следующий слайд</span>
+      </button>
+      <div class="hero__pagination slider__pagination slider-pagination">
+        <button class="slider__pagination-button slider__pagination-button--active" type="button">
+          <span class="visually-hidden">Кнопка пагинации</span>
         </button>
-        <button class="button slider__button slider-button-next" type="button">
-          <svg class="slider__right-button" width="20" height="20">
-            <use href="icons/stack.svg#slider-right"></use>
-          </svg>
-          <span class="visually-hidden">Посмотреть следующий слайд</span>
+        <button class="slider__pagination-button" type="button">
+          <span class="visually-hidden">Кнопка пагинации</span>
         </button>
+        <button class="slider__pagination-button" type="button">
+          <span class="visually-hidden">Кнопка пагинации</span>
+        </button>
+      </div>
+    </section>
+    <section class="features" data-test="features">
+      <div class="features__container container">
+        <div class="features__text-wrapper">
+          <p class="features__text">Преимущества</p>
+          <h2 class="features__header">Главные причины выбрать Drink2Go</h2>
+        </div>
+        <ul class="features__list">
+          <li class="features__item features__item--speed">
+            <div class="features__item-wrapper">
+              <h3 class="features__item-header">Скорость</h3>
+              <p class="features__item-text">Готовый напиток всегда под&nbsp;рукой&nbsp;— просто открой банку</p>
+            </div>
+          </li>
+
+          <li class="features__item features__item--fit">
+            <div class="features__item-wrapper">
+              <h3 class="features__item-header">Удобство</h3>
+              <p class="features__item-text">Легко помещается и в карман, и&nbsp;в&nbsp;маленькую сумочку</p>
+            </div>
+          </li>
+
+          <li class="features__item features__item--energy">
+            <div class="features__item-wrapper">
+              <h3 class="features__item-header">Бодрость</h3>
+              <p class="features__item-text">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+            </div>
+          </li>
+
+          <li class="features__item features__item--eco">
+            <div class="features__item-wrapper">
+              <h3 class="features__item-header">Экологичность</h3>
+              <p class="features__item-text">Вся упаковка сделана из&nbsp;перерабатываемых материалов</p>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
   </main>

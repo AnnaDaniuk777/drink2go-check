@@ -1,28 +1,122 @@
 .hero {
-  background-color: $background-flat-white;
   position: relative;
+  transition: background-color 0.5s ease-in-out;
+
+  &--biege {
+    background-color: $background-flat-white;
+
+    @media (min-width: $tablet-width) {
+      background-image: linear-gradient(to top, $base-white 150px, $background-flat-white 150px);
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: none;
+    }
+  }
+
+  &--lavender {
+    background-color: $background-light-purple;
+
+    @media (min-width: $tablet-width) {
+      background-image: linear-gradient(to top, $base-white 150px, $background-light-purple 150px);
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: none;
+    }
+  }
+
+  &--grey {
+    background-color: $background-grey;
+
+    @media (min-width: $tablet-width) {
+      background-image: linear-gradient(to top, $base-white 150px, $background-grey 150px);
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: none;
+    }
+  }
 }
 
 .hero__container {
-  padding-top: 20px;
-  padding-bottom: 60px;
+  padding: 0;
+
+  & .hero__slider-item--biege {
+    background-color: $background-flat-white;
+
+    @media (min-width: $tablet-width) {
+      background-image: linear-gradient(to top, $base-white 150px, $background-flat-white 150px);
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: none;
+    }
+  }
+
+  & .hero__slider-item--lavender {
+    background-color: $background-light-purple;
+
+    @media (min-width: $tablet-width) {
+      background-image: linear-gradient(to top, $base-white 150px, $background-light-purple 150px);
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: none;
+    }
+  }
+
+  & .hero__slider-item--grey {
+    background-color: $background-grey;
+
+    @media (min-width: $tablet-width) {
+      background-image: linear-gradient(to top, $base-white 150px, $background-grey 150px);
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: none;
+    }
+  }
 }
 
 .hero__slider-item {
   display: none;
 
-  @media (max-width: $mobile-width-only) {
-    &--active {
-      display: flex;
-      flex-direction: column-reverse;
-      align-items: center;
+  &--active {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    animation: fadeIn 0.5s ease-in-out;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: column;
     }
+
+    @media (min-width: $desktop-width) {
+      flex-direction: row-reverse;
+      gap: 30px;
+      align-items: flex-start;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 
 .hero__image {
   display: block;
   margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .hero__content-wrapper {
@@ -30,6 +124,36 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 60px;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 80px 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    padding-top: 180px;
+    padding-right: 80px;
+    align-items: flex-start;
+  }
+}
+
+.hero__image-wrapper {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 30px;
+    padding-left: 105px;
+    padding-bottom: 84px;
+  }
 }
 
 .hero__text {
@@ -48,12 +172,28 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 56px;
+    line-height: 80px;
+    margin-bottom: 16px;
+  }
 }
 
 .hero__description {
   text-align: center;
   margin: 0;
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    margin-bottom: 40px;
+  }
 }
 
 .hero__order-wrapper {

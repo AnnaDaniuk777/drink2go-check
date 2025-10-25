@@ -3,21 +3,19 @@
 
   @media (max-width: $mobile-width-only) {
     &--closed {
-      .site-list {
+      .main-nav__list {
         display: none;
       }
     }
 
     &--opened {
-      .site-list {
+      .main-nav__list {
         display: flex;
       }
 
       .main-nav__toggle {
         background-image: url("../../icons/stack.svg#close-button");
         background-size: 12px 12px;
-        width: 12px;
-        height: 12px;
       }
     }
   }
@@ -40,17 +38,17 @@
   cursor: pointer;
   background-color: $base-white;
   background-image: url("../../icons/stack.svg#burger-button");
-  background-position: 50%;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: 16px 16px;
   border: none;
-  width: 16px;
-  height: 16px;
+  width: 60px;
+  height: 60px;
   padding: 10px 22px;
   display: none;
   position: absolute;
-  top: 20px;
-  right: 10px;
+  top: 0;
+  right: 0;
 
   @media (max-width: $mobile-width-only) {
     display: block;
