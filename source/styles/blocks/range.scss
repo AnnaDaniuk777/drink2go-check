@@ -1,0 +1,52 @@
+.range {
+  position: relative;
+  width: 280px;
+  height: 2px;
+  background-color: $base-grey-light;
+  margin-bottom: 35px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+  }
+}
+
+.range__bar {
+  position: absolute;
+  display: block;
+  width: 241px;
+  height: 2px;
+  background-color: $base-purple-lighter;
+
+  @media (min-width: $tablet-width) {
+    width: 192px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 274px;
+  }
+}
+
+.range__toggle {
+  @include pseudo;
+  width: 24px;
+  height: 24px;
+  border: 2px solid $base-purple-lighter;
+  border-radius: 50%;
+  background-color: $base-white;
+  cursor: pointer;
+
+  &--min {
+    top: -12px;
+    left: 0;
+  }
+
+  &--max {
+    top: -12px;
+    right: 0;
+  }
+}

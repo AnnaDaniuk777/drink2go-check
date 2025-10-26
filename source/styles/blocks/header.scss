@@ -26,5 +26,7 @@
 
 .header__menu-wrapper {
   @include flex-between;
+  flex-wrap: wrap;
   gap: 20px;
+  padding-right: 10px;
 }

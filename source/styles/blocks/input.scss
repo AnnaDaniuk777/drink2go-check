@@ -1,0 +1,52 @@
+.input {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    justify-self: flex-start;
+  }
+}
+
+.input__range {
+  font-family: $font-primary;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  margin: 0;
+  width: 118px;
+  height: 40px;
+  text-align: center;
+  padding: 8px 10px;
+  border: 2px solid $base-purple-lighter;
+  border-radius: 4px;
+
+  &--min {
+    margin-right: 18px;
+    color: $base-grey;
+  }
+
+  &--max {
+    margin-left: 18px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 114px;
+  }
+}
+
+.input__dash {
+  @include pseudo;
+  width: 8px;
+  height: 2px;
+  background-color: $base-grey;
+  top: 50%;
+  left: 49%;
+}

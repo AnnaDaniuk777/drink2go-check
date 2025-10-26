@@ -1,0 +1,82 @@
+.pagination {
+  @include reset;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
+}
+
+.pagination__text {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.pagination__link {
+  display: block;
+  position: relative;
+  width: auto;
+  min-height: 40px;
+  min-width: 40px;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+  color: $base-purple;
+  border-radius: 4px;
+  background-color: $base-white;
+  text-align: center;
+  cursor: pointer;
+
+  &--prev,
+  &--next {
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+
+    &::before {
+      @include pseudo;
+      width: 10px;
+      height: 6px;
+      mask-image: url("../../icons/stack.svg#pagination-arrow");
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: 10px 6px;
+      background-color: currentColor;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: background-color 0.3s ease;
+    }
+  }
+
+  &--prev::before {
+    transform: translate(-50%, -50%);
+  }
+
+  &--next::before {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+
+  &--active {
+    color: $base-black;
+    font-weight: 600;
+    background-color: $background-light-grey;
+    cursor: not-allowed;
+
+    &::before {
+      background-color: currentColor;
+    }
+  }
+}
+
+.pagination__link::before {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}

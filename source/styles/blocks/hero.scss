@@ -124,6 +124,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   padding-right: 20px;
   padding-left: 20px;
   padding-bottom: 60px;
@@ -136,6 +137,7 @@
     padding: 0;
     padding-top: 180px;
     padding-right: 80px;
+    padding-bottom: 157px;
     align-items: flex-start;
   }
 }
@@ -198,6 +200,7 @@
 
 .hero__order-wrapper {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   align-items: center;
 }
@@ -205,6 +208,7 @@
 .hero__info {
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
   gap: 6px;
 }
 
