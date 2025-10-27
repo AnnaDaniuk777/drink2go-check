@@ -40,7 +40,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 36px;
+    margin-bottom: 40px;
   }
 }
 
@@ -75,6 +75,10 @@
 .catalog__filter-list {
   @include reset;
   margin-bottom: 30px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .catalog__control {
@@ -104,7 +108,7 @@
   top: 0;
 }
 
-.catalog__control-input[type="radio"]:checked + .catalog__control-mark::before {
+.catalog__control-input[type="radio"]:checked+.catalog__control-mark::before {
   @include pseudo;
   width: 16px;
   height: 16px;
@@ -120,6 +124,10 @@
   flex-direction: column;
   gap: 20px;
   margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .catalog__toggle-label {
@@ -165,7 +173,7 @@
 }
 
 // Стили для checked состояния
-.catalog__toggle-label input[type="checkbox"]:checked + .catalog__toggle-slider {
+.catalog__toggle-label input[type="checkbox"]:checked+.catalog__toggle-slider {
   background-color: $base-purple;
 
   &::before {
@@ -175,12 +183,12 @@
 }
 
 // Стили для focus состояния
-.catalog__toggle-label input[type="checkbox"]:focus + .catalog__toggle-slider {
+.catalog__toggle-label input[type="checkbox"]:focus+.catalog__toggle-slider {
   box-shadow: 0 0 0 2px rgba($base-purple, 0.3);
 }
 
 // Стили для disabled состояния
-.catalog__toggle-label input[type="checkbox"]:disabled + .catalog__toggle-slider {
+.catalog__toggle-label input[type="checkbox"]:disabled+.catalog__toggle-slider {
   opacity: 0.5;
   cursor: not-allowed;
 }
@@ -192,7 +200,7 @@
   margin-bottom: 40px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 44px;
+    margin-bottom: 41px;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -219,6 +227,11 @@
     margin-bottom: 26px;
     justify-content: flex-end;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 23px;
+    align-items: start;
+  }
 }
 
 .catalog__select-title {
@@ -230,12 +243,21 @@
 
 .catalog__select-control {
   @include reset-select;
+  font-size: 16px;
   width: 165px;
   height: 32px;
-  padding: 4px 30px 4px 10px;
+  padding: 5px 25px 4px 14px;
   line-height: 24px;
   font-weight: 600;
   color: $base-purple;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 11px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+  }
 }
 
 .catalog__select-wrapper {
@@ -252,6 +274,10 @@
     top: 15px;
     right: 10px;
     color: $base-purple;
+
+    @media (min-width: $desktop-width) {
+      top: 10px;
+    }
   }
 }
 
@@ -259,5 +285,12 @@
   @media (min-width: $desktop-width) {
     display: flex;
     gap: 30px;
+  }
+}
+
+.catalog__submit-button,
+.catalog__reset-button {
+  @media (min-width: $desktop-width) {
+    min-width: 149px;
   }
 }

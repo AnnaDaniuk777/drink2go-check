@@ -4,14 +4,17 @@
   height: 2px;
   background-color: $base-grey-light;
   margin-bottom: 35px;
+  margin-top: 10px;
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
     width: 223px;
+    margin-bottom: 32px;
   }
 
   @media (min-width: $desktop-width) {
     width: 318px;
+    margin-bottom: 34px;
   }
 }
 
@@ -19,7 +22,7 @@
   position: absolute;
   display: block;
   width: 241px;
-  height: 2px;
+  height: 4px;
   background-color: $base-purple-lighter;
 
   @media (min-width: $tablet-width) {
@@ -41,12 +44,20 @@
   cursor: pointer;
 
   &--min {
-    top: -12px;
+    top: -10px;
     left: 0;
   }
 
   &--max {
-    top: -12px;
-    right: 0;
+    top: -10px;
+    right: -18px;
+
+    @media (min-width: $tablet-width) {
+      right: -11px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: -24px;
+    }
   }
 }

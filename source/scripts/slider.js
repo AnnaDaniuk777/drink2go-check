@@ -6,15 +6,17 @@ export function initSlider() {
   let currentSlide = 0;
 
   function showSlide(index) {
+    currentSlide = index;
+
     slides.forEach((slide) => {
       slide.classList.remove('hero__slider-item--active');
     });
 
-    slides[index].classList.add('hero__slider-item--active');
-    updateHeroBackground(index);
-    updatePagination(index);
-    updateButtonStates(index);
-    currentSlide = index;
+    slides[currentSlide].classList.add('hero__slider-item--active');
+
+    updateHeroBackground(currentSlide);
+    updatePagination(currentSlide);
+    updateButtonStates(currentSlide);
   }
 
   function updateHeroBackground(index) {
@@ -37,46 +39,32 @@ export function initSlider() {
   }
 
   function updatePagination(index) {
-    paginationButtons.forEach((button) => {
+    paginationButtons.forEach((button, buttonIndex) => {
       button.classList.remove('slider__pagination-button--active');
-    });
 
-    paginationButtons[index].classList.add('slider__pagination-button--active');
+      if (buttonIndex === index) {
+        button.classList.add('slider__pagination-button--active');
+      }
+    });
   }
 
   function updateButtonStates(index) {
-    if (index === 0) {
-      prevBtn.disabled = true;
-      prevBtn.style.opacity = '0.5';
-      prevBtn.style.cursor = 'not-allowed';
-    } else {
-      prevBtn.disabled = false;
-      prevBtn.style.opacity = '1';
-      prevBtn.style.cursor = 'pointer';
-    }
+    const isFirstSlide = index === 0;
+    prevBtn.disabled = isFirstSlide;
 
-    if (index === slides.length - 1) {
-      nextBtn.disabled = true;
-      nextBtn.style.opacity = '0.5';
-      nextBtn.style.cursor = 'not-allowed';
-    } else {
-      nextBtn.disabled = false;
-      nextBtn.style.opacity = '1';
-      nextBtn.style.cursor = 'pointer';
-    }
+    const isLastSlide = index === slides.length - 1;
+    nextBtn.disabled = isLastSlide;
   }
 
   function nextSlide() {
     if (currentSlide < slides.length - 1) {
-      currentSlide++;
-      showSlide(currentSlide);
+      showSlide(currentSlide + 1);
     }
   }
 
   function prevSlide() {
     if (currentSlide > 0) {
-      currentSlide--;
-      showSlide(currentSlide);
+      showSlide(currentSlide - 1);
     }
   }
 

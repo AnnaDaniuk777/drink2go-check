@@ -1,0 +1,232 @@
+{
+  "id": "drink2go test-07",
+  "viewports": [
+    {
+      "label": "desktop",
+      "width": 800,
+      "height": 600
+    }
+  ],
+  "onReadyScript": "onReady.js",
+  "scenarios": [
+    {
+      "label": "index hero TEST-07. 5 hover",
+      "url": "http://localhost:3000/index.html",
+      "referenceUrl": "./reference/index.html",
+      "selectors": [],
+      "content": "Заказать",
+      "section": "hero",
+      "hoverSelector": "*",
+      "onReadyScript": "interaction.js",
+      "postInteractionWait": 500,
+      "misMatchThreshold": 5
+    },
+    {
+      "label": "index hero TEST-07. 5 active",
+      "url": "http://localhost:3000/index.html",
+      "referenceUrl": "./reference/index.html",
+      "selectors": [],
+      "content": "Заказать",
+      "section": "hero",
+      "activeSelector": "*",
+      "onReadyScript": "interaction.js",
+      "postInteractionWait": 500,
+      "misMatchThreshold": 5
+    },
+    {
+      "label": "index hero TEST-07. 5 focus",
+      "url": "http://localhost:3000/index.html",
+      "referenceUrl": "./reference/index.html",
+      "selectors": [],
+      "content": "Заказать",
+      "section": "hero",
+      "focusSelector": "*",
+      "onReadyScript": "interaction.js",
+      "postInteractionWait": 500,
+      "misMatchThreshold": 5
+    },
+    {
+      "label": "index hero TEST-07. 5 disable",
+      "url": "http://localhost:3000/index.html",
+      "referenceUrl": "./reference/index.html",
+      "selectors": [],
+      "content": "Заказать",
+      "section": "hero",
+      "disableSelector": "*",
+      "onReadyScript": "interaction.js",
+      "postInteractionWait": 500,
+      "misMatchThreshold": 5
+    },
+    {
+      "label": "index footer TEST-07. 15 hover",
+      "url": "http://localhost:3000/index.html",
+      "referenceUrl": "./reference/index.html",
+      "selectors": [],
+      "content": "Доставка",
+      "section": "footer",
+      "hoverSelector": "*",
+      "onReadyScript": "interaction.js",
+      "postInteractionWait": 500,
+      "misMatchThreshold": 5
+    },
+    {
+      "label": "index footer TEST-07. 15 active",
+      "url": "http://localhost:3000/index.html",
+      "referenceUrl": "./reference/index.html",
+      "selectors": [],
+      "content": "Доставка",
+      "section": "footer",
+      "activeSelector": "*",
+      "onReadyScript": "interaction.js",
+      "postInteractionWait": 500,
+      "misMatchThreshold": 5
+    },
+    {
+      "label": "index footer TEST-07. 15 focus",
+      "url": "http://localhost:3000/index.html",
+      "referenceUrl": "./reference/index.html",
+      "selectors": [],
+      "content": "Доставка",
+      "section": "footer",
+      "focusSelector": "*",
+      "onReadyScript": "interaction.js",
+      "postInteractionWait": 500,
+      "misMatchThreshold": 5
+    },
+    {
+      "label": "index footer TEST-07. 15 disable",
+      "url": "http://localhost:3000/index.html",
+      "referenceUrl": "./reference/index.html",
+      "selectors": [],
+      "content": "Доставка",
+      "section": "footer",
+      "disableSelector": "*",
+      "onReadyScript": "interaction.js",
+      "postInteractionWait": 500,
+      "misMatchThreshold": 5
+    },
+    {
+      "label": "index footer TEST-07. 16 hover",
+      "url": "http://localhost:3000/index.html",
+      "referenceUrl": "./reference/index.html",
+      "selectors": [],
+      "content": "+7 (999) 999-99-99",
+      "section": "footer",
+      "hoverSelector": "*",
+      "onReadyScript": "interaction.js",
+      "postInteractionWait": 500,
+      "misMatchThreshold": 5
+    },
+    {
+      "label": "index footer TEST-07. 16 active",
+      "url": "http://localhost:3000/index.html",
+      "referenceUrl": "./reference/index.html",
+      "selectors": [],
+      "content": "+7 (999) 999-99-99",
+      "section": "footer",
+      "activeSelector": "*",
+      "onReadyScript": "interaction.js",
+      "postInteractionWait": 500,
+      "misMatchThreshold": 5
+    },
+    {
+      "label": "index footer TEST-07. 16 focus",
+      "url": "http://localhost:3000/index.html",
+      "referenceUrl": "./reference/index.html",
+      "selectors": [],
+      "content": "+7 (999) 999-99-99",
+      "section": "footer",
+      "focusSelector": "*",
+      "onReadyScript": "interaction.js",
+      "postInteractionWait": 500,
+      "misMatchThreshold": 5
+    },
+    {
+      "label": "index footer TEST-07. 16 disable",
+      "url": "http://localhost:3000/index.html",
+      "referenceUrl": "./reference/index.html",
+      "selectors": [],
+      "content": "+7 (999) 999-99-99",
+      "section": "footer",
+      "disableSelector": "*",
+      "onReadyScript": "interaction.js",
+      "postInteractionWait": 500,
+      "misMatchThreshold": 5
+    },
+    {
+      "label": "index footer TEST-07. 17 hover",
+      "url": "http://localhost:3000/index.html",
+      "referenceUrl": "./reference/index.html",
+      "selectors": [],
+      "content": "HTML Academy",
+      "section": "footer",
+      "hoverSelector": "*",
+      "onReadyScript": "interaction.js",
+      "postInteractionWait": 500,
+      "misMatchThreshold": 5
+    },
+    {
+      "label": "index footer TEST-07. 17 active",
+      "url": "http://localhost:3000/index.html",
+      "referenceUrl": "./reference/index.html",
+      "selectors": [],
+      "content": "HTML Academy",
+      "section": "footer",
+      "activeSelector": "*",
+      "onReadyScript": "interaction.js",
+      "postInteractionWait": 500,
+      "misMatchThreshold": 5
+    },
+    {
+      "label": "index footer TEST-07. 17 focus",
+      "url": "http://localhost:3000/index.html",
+      "referenceUrl": "./reference/index.html",
+      "selectors": [],
+      "content": "HTML Academy",
+      "section": "footer",
+      "focusSelector": "*",
+      "onReadyScript": "interaction.js",
+      "postInteractionWait": 500,
+      "misMatchThreshold": 5
+    },
+    {
+      "label": "index footer TEST-07. 17 disable",
+      "url": "http://localhost:3000/index.html",
+      "referenceUrl": "./reference/index.html",
+      "selectors": [],
+      "content": "HTML Academy",
+      "section": "footer",
+      "disableSelector": "*",
+      "onReadyScript": "interaction.js",
+      "postInteractionWait": 500,
+      "misMatchThreshold": 5
+    }
+  ],
+  "fileNameTemplate": "{configId}_{scenarioLabel}_{viewportLabel}",
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference/test-07",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "engine_scripts",
+    "html_report": "backstop_data/html_report"
+  },
+  "report": [
+    "browser"
+  ],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": [
+      "--no-sandbox"
+    ],
+    "gotoParameters": {
+      "waitUntil": [
+        "load",
+        "networkidle0"
+      ],
+      "timeout": 20000
+    }
+  },
+  "asyncCaptureLimit": 10,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}

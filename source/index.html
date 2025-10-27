@@ -138,13 +138,13 @@
           </div>
         </div>
       </div>
-      <button class="button slider slider__button slider-button-prev" type="button">
+      <button class="button slider slider__button slider__button--prev slider-button-prev" type="button">
         <svg class="slider__left-button" width="20" height="20">
           <use href="icons/stack.svg#slider-left"></use>
         </svg>
         <span class="visually-hidden">Посмотреть предыдущий слайд</span>
       </button>
-      <button class="button slider slider__button slider-button-next" type="button">
+      <button class="button slider slider__button slider__button--next slider-button-next" type="button">
         <svg class="slider__right-button" width="20" height="20">
           <use href="icons/stack.svg#slider-right"></use>
         </svg>
@@ -172,7 +172,7 @@
           <li class="features__item features__item--speed">
             <div class="features__item-wrapper">
               <h3 class="features__item-header">Скорость</h3>
-              <p class="features__item-text">Готовый напиток всегда под&nbsp;рукой&nbsp;— просто открой банку</p>
+              <p class="features__item-text">Готовый напиток всегда под рукой&nbsp;— просто открой банку</p>
             </div>
           </li>
           <li class="features__item features__item--fit">
@@ -206,7 +206,7 @@
               <div class="catalog__range-toggle-wrapper">
                 <fieldset class="catalog__filter-group">
                   <legend class="catalog__filter-title">Цена</legend>
-                  <div class="catalog__range-scale range">
+                  <div class="catalog__range-scale range" id="range-slider">
                     <div class="range__bar">
                       <button class="range__toggle range__toggle--min" type="button">
                         <span class="visually-hidden">Изменить минимальную цену</span>
@@ -329,7 +329,7 @@
                   </picture>
                   <div class="card__text-wrapper">
                     <h2 class="card__title">Декаф Флэт Уайт</h2>
-                    <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                    <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                     <div class="card__order-wrapper">
                       <span class="card__price">225₽</span>
                       <a class="card__button button" href="#">В корзину</a>
@@ -343,7 +343,7 @@
                   </picture>
                   <div class="card__text-wrapper">
                     <h2 class="card__title">Декаф Флэт Уайт</h2>
-                    <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                    <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                     <div class="card__order-wrapper">
                       <span class="card__price">225₽</span>
                       <a class="card__button button" href="#">В корзину</a>
@@ -357,7 +357,7 @@
                   </picture>
                   <div class="card__text-wrapper">
                     <h2 class="card__title">Декаф Флэт Уайт</h2>
-                    <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                    <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                     <div class="card__order-wrapper">
                       <span class="card__price">225₽</span>
                       <a class="card__button button" href="#">В корзину</a>
@@ -371,7 +371,7 @@
                   </picture>
                   <div class="card__text-wrapper">
                     <h2 class="card__title">Декаф Флэт Уайт</h2>
-                    <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                    <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                     <div class="card__order-wrapper">
                       <span class="card__price">225₽</span>
                       <a class="card__button button" href="#">В корзину</a>
@@ -385,7 +385,7 @@
                   </picture>
                   <div class="card__text-wrapper">
                     <h2 class="card__title">Декаф Флэт Уайт</h2>
-                    <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                    <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                     <div class="card__order-wrapper">
                       <span class="card__price">225₽</span>
                       <a class="card__button button" href="#">В корзину</a>
@@ -399,7 +399,7 @@
                   </picture>
                   <div class="card__text-wrapper">
                     <h2 class="card__title">Декаф Флэт Уайт</h2>
-                    <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                    <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                     <div class="card__order-wrapper">
                       <span class="card__price">225₽</span>
                       <a class="card__button button" href="#">В корзину</a>
@@ -434,17 +434,15 @@
       </div>
     </section>
     <section class="map" data-test="map">
-      <div class="map__container container">
-        <h2 class="visually-hidden">Карта местонахождения магазина Drink2Go</h2>
-        <picture>
-          <source type="image/webp" media="(min-width: 1440px)" srcset="images/map-desktop@1x.webp, images/map-desktop@2x.webp 2x" width="1440" height="540">
-          <source type="image/webp" media="(min-width: 768px)" srcset="images/map-tablet@1x.webp, images/map-tablet@2x.webp 2x" width="768" height="480">
-          <source type="image/webp" srcset="images/map-mobile@1x.webp, images/map-mobile@2x.webp 2x" width="320" height="420">
-          <source width="1440" height="540" type="image/jpeg" media="(min-width: 1440px)" srcset="images/map-desktop@1x.jpg, images/map-desktop@2x.jpg 2x">
-          <source width="768" height="480" type="image/jpeg" media="(min-width: 768px)" srcset="images/map-tablet@1x.jpg, images/map-tablet@2x.jpg 2x">
-          <img class="map__picture" src="images/map-mobile@1x.jpg" srcset="images/map-mobile@2x.jpg 2x" width="320" height="420" alt="Карта офиса по адресу: Санкт-Петербург, набережная реки Карповки, дом 5" loading="lazy">
-        </picture>
-      </div>
+      <h2 class="visually-hidden">Карта местонахождения магазина Drink2Go</h2>
+      <picture>
+        <source type="image/webp" media="(min-width: 1440px)" srcset="images/map-desktop@1x.webp, images/map-desktop@2x.webp 2x" width="1440" height="540">
+        <source type="image/webp" media="(min-width: 768px)" srcset="images/map-tablet@1x.webp, images/map-tablet@2x.webp 2x" width="768" height="480">
+        <source type="image/webp" srcset="images/map-mobile@1x.webp, images/map-mobile@2x.webp 2x" width="320" height="420">
+        <source width="1440" height="540" type="image/jpeg" media="(min-width: 1440px)" srcset="images/map-desktop@1x.jpg, images/map-desktop@2x.jpg 2x">
+        <source width="768" height="480" type="image/jpeg" media="(min-width: 768px)" srcset="images/map-tablet@1x.jpg, images/map-tablet@2x.jpg 2x">
+        <img class="map__picture" src="images/map-mobile@1x.jpg" srcset="images/map-mobile@2x.jpg 2x" width="320" height="420" alt="Карта офиса по адресу: Санкт-Петербург, набережная реки Карповки, дом 5" loading="lazy">
+      </picture>
     </section>
   </main>
   <footer class="details" data-test="footer">
@@ -522,7 +520,7 @@
               </li>
             </ul>
           </div>
-          <div class="information__container">
+          <div class="information__container information__container--contacts">
             <h2 class="information__header">Контакты</h2>
             <ul class="information__list">
               <li class="information__item">
@@ -545,6 +543,7 @@
       </div>
     </div>
   </footer>
+
 </body>
 
 </html>
