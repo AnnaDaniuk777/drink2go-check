@@ -1,0 +1,41 @@
+.copyright {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.copyright__item,
+.copyright__link {
+  text-decoration: none;
+  color: $base-grey;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.copyright__link {
+  padding-right: 16px;
+  position: relative;
+
+  &::after {
+    @include pseudo;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    width: 12px;
+    height: 16px;
+    mask-size: 12px 16px;
+    mask-image: url("../../icons/stack.svg#logo-icon");
+    background-color: $base-grey;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    transition: background-color 0.3s ease-in-out;
+  }
+}

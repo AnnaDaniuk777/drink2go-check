@@ -24,14 +24,9 @@
   @media (min-width: $tablet-width) {
     gap: 65px;
   }
-}
 
-.main-nav__wrapper {
-  @include flex-between;
-  align-items: center;
-
-  @media (max-width: $mobile-width-only) {
-    width: 100%;
+  @media (min-width: $desktop-width) {
+    gap: 162px;
   }
 }
 
@@ -43,13 +38,17 @@
   background-repeat: no-repeat;
   background-size: 16px 16px;
   border: none;
-  width: 60px;
-  height: 60px;
-  padding: 10px 22px;
   display: none;
   position: absolute;
   top: 0;
   right: 0;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+
+  &:active {
+    background-color: $base-light-purple;
+  }
 
   @media (max-width: $mobile-width-only) {
     display: block;

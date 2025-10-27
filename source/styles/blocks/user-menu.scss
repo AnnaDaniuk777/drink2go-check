@@ -1,6 +1,10 @@
 .user-menu {
   @include reset;
   display: flex;
+
+  @media (min-width: $desktop-width) {
+    gap: 20px;
+  }
 }
 
 .user-menu__link {
@@ -13,8 +17,41 @@
   position: relative;
   display: block;
   width: 60px;
-  height: 60px;
   cursor: pointer;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in;
+
+  @media (max-width: $mobile-width-only) {
+    height: 60px;
+
+    &:active {
+      background-color: $base-light-purple;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 80px;
+
+    &:active {
+      background-color: $base-light-purple;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    @media (min-width: $desktop-width) {
+      color: $base-purple;
+
+      &::before {
+        background-color: $base-purple;
+      }
+    }
+  }
+
+  &:active {
+    @media (min-width: $desktop-width) {
+      background-color: $base-light-purple;
+    }
+  }
 
   &::before {
     @include pseudo;
@@ -23,16 +60,27 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-repeat: no-repeat;
-    background-size: 16px 16px;
+    mask-repeat: no-repeat;
+    mask-size: 16px 16px;
+    background-color: $base-black;
+    transition: background-color 0.3s ease-in;
+
+    @media (min-width: $desktop-width) {
+      left: 20px;
+    }
   }
 
   &--login::before {
-    background-image: url("../../icons/stack.svg#nav-user-icon");
+    mask-image: url("../../icons/stack.svg#nav-user-icon");
   }
 
   &--basket::before {
-    background-image: url("../../icons/stack.svg#basket-user-icon");
+    mask-image: url("../../icons/stack.svg#basket-user-icon");
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    height: auto;
   }
 }
 
@@ -41,6 +89,7 @@
 
   @media (min-width: $desktop-width) {
     display: inline-block;
+    padding: 32px 20px 32px 44px;
   }
 }
 
@@ -55,7 +104,5 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 80px;
   }
 }

@@ -15,6 +15,11 @@
   @media (min-width: $tablet-width) {
     @include flex-between;
   }
+
+  @media (min-width: $desktop-width) {
+    gap: 20px;
+    justify-content: flex-start;
+  }
 }
 
 .site-list__button {
@@ -26,6 +31,13 @@
   font-size: 12px;
   line-height: 16px;
   position: relative;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease;
+
+  &--active {
+    @media (min-width: $tablet-width) {
+      color: $base-purple;
+    }
+  }
 
   &--active::after {
     @media (min-width: $tablet-width) {
@@ -35,6 +47,22 @@
       bottom: 0;
       left: 0;
       right: 0;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    @media (min-width: $tablet-width) {
+      color: $base-purple;
+      background-color: $base-light-purple;
+    }
+  }
+
+  &:active {
+    background-color: $base-light-purple;
+
+    @media (min-width: $tablet-width) {
+      color: $base-purple;
     }
   }
 

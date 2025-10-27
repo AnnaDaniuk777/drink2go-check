@@ -1,0 +1,110 @@
+.information {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 223px);
+    gap: 30px;
+    margin-bottom: 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(3, 318px);
+    margin-bottom: 20px;
+  }
+}
+
+.information__container {
+  padding: 20px;
+  border-top: 1px solid $base-light-purple;
+
+  &:last-child {
+    border-bottom: 1px solid $base-light-purple;
+
+    @media (min-width: $tablet-width) {
+      border: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    border: none;
+    padding: 0;
+  }
+}
+
+.information__header {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  color: $base-purple;
+  margin: 0;
+  margin-bottom: 12px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.information__list {
+  @include reset;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.information__link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $base-black;
+  position: relative;
+  transition: color 0.3s ease-in;
+
+  &:not(.information__link--address):not(.information__link--phone) {
+    &:hover,
+    &:focus {
+      color: $base-purple-lighter;
+    }
+
+    &:active {
+      color: $base-purple-darker;
+    }
+  }
+
+  &--address,
+  &--phone {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    text-transform: none;
+    transition: none;
+  }
+
+  &--address {
+    padding-left: 19px;
+  }
+
+  &--phone {
+    padding-left: 15px;
+  }
+}
+
+.information__link--address::after,
+.information__link--phone::after {
+  @include pseudo;
+  background-color: $base-purple;
+  width: 13px;
+  height: 16px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.information__link--address::after {
+  mask-image: url("../../icons/stack.svg#address-icon");
+}
+
+.information__link--phone::after {
+  mask-image: url("../../icons/stack.svg#phone-icon");
+}

@@ -1,0 +1,37 @@
+.social {
+  @include reset;
+  display: flex;
+  gap: 20px;
+}
+
+.social__item {
+  padding: 10px;
+}
+
+.social__link {
+  text-decoration: none;
+  background-color: $base-grey;
+  min-width: 20px;
+  min-height: 20px;
+  transition: background-color 0.3s ease-in-out;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  display: block;
+
+  &--vk {
+    mask-size: 20px 20px;
+    mask-image: url("../../icons/stack.svg#vk-icon");
+  }
+
+  &--pinterest {
+    mask-size: 22px 22px;
+    mask-image: url("../../icons/stack.svg#pinterest-icon");
+    width: 22px;
+    height: 22px;
+  }
+
+  &--ok {
+    mask-size: 20px 20px;
+    mask-image: url("../../icons/stack.svg#ok-icon");
+  }
+}
