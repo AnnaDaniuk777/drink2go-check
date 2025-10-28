@@ -25,17 +25,21 @@
   "onReadyScript": "onReady.js",
   "scenarios": [
     {
-      "label": "index hero TEST-05. Шрифты.",
+      "label": "index header TEST-05. Шрифты.",
       "url": "http://localhost:3000/index.html",
       "referenceUrl": "./reference/index.html",
       "selectors": [],
       "content": [
-        "Новинка!",
-        "Декаф Флэт Уайт",
-        "Свежесваренный кофе без кофеина",
-        "225₽",
-        "295₽",
-        "Заказать"
+        "Главная",
+        "Доставка",
+        "Войти"
+      ],
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1440,
+          "height": 800
+        }
       ],
       "onReadyScript": "textStylesOnly.js",
       "misMatchThreshold": 5
@@ -55,16 +59,24 @@
       "misMatchThreshold": 5
     },
     {
-      "label": "index footer TEST-05. Шрифты.",
+      "label": "index catalog TEST-05. Шрифты.",
       "url": "http://localhost:3000/index.html",
       "referenceUrl": "./reference/index.html",
       "selectors": [],
       "content": [
-        "Способы оплаты",
-        "Медиа",
-        "Санкт-Петербург",
-        "Разработано",
-        "HTML Academy"
+        "Каталог кофейных напитков",
+        "Цена",
+        "Наличие молока",
+        "Неважно",
+        "Страна произрастания",
+        "Бразилия",
+        "Эфиопия",
+        "Перу",
+        "Применить",
+        "Сбросить",
+        "Сортировка",
+        "Кофе без кофеина из Эфиопии",
+        "В корзину"
       ],
       "onReadyScript": "textStylesOnly.js",
       "misMatchThreshold": 5

@@ -10,4 +10,19 @@
   padding: 8px 20px;
   border-radius: 4px;
   cursor: pointer;
+  transform: background-color 0.3s ease;
+
+  &:hover,
+  &:focus {
+    background-color: $base-purple-lighter;
+  }
+
+  &:active {
+    background-color: $base-purple-darker;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+    cursor: none;
+  }
 }

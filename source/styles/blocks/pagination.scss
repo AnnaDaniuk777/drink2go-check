@@ -32,6 +32,23 @@
   background-color: $base-white;
   text-align: center;
   cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+
+  &:hover,
+  &:focus {
+    background-color: $base-purple-lighter;
+    color: $base-white;
+  }
+
+  &:active {
+    background-color: $base-purple-darker;
+    color: $base-white;
+  }
+
+  &:disabled {
+    background-color: $base-grey-light;
+    color: $base-white;
+  }
 
   &--prev,
   &--next {
@@ -69,7 +86,14 @@
     color: $base-black;
     font-weight: 600;
     background-color: $background-light-grey;
-    cursor: not-allowed;
+    cursor: default;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $background-light-grey;
+      color: $base-black;
+    }
 
     &::before {
       background-color: currentColor;

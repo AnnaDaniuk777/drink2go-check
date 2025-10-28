@@ -18,6 +18,7 @@
 .catalog__text {
   font-size: 12px;
   line-height: 16px;
+  letter-spacing: 0.04em;
   font-weight: 700;
   text-transform: uppercase;
   color: $base-purple;
@@ -106,9 +107,23 @@
   border-radius: 50%;
   left: 0;
   top: 0;
+
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+
+  .catalog__control:hover & {
+    border-color: $base-purple-opacity;
+  }
+
+  .catalog__control-input[type="radio"]:focus + & {
+    box-shadow: 0 0 0 2px rgba($base-purple, 0.3);
+  }
+
+  .catalog__control-input[type="radio"]:active + & {
+    border-color: $base-purple;
+  }
 }
 
-.catalog__control-input[type="radio"]:checked+.catalog__control-mark::before {
+.catalog__control-input[type="radio"]:checked + .catalog__control-mark::before {
   @include pseudo;
   width: 16px;
   height: 16px;
@@ -117,6 +132,31 @@
   transform: translate(-50%, -50%);
   background-color: $base-purple;
   border-radius: 50%;
+}
+
+.catalog__control-input[type="radio"]:disabled {
+  & + .catalog__control-mark {
+    border-color: $base-grey;
+    background-color: $background-light-grey;
+    cursor: none;
+
+    &::before {
+      background-color: $base-grey;
+    }
+  }
+
+  & ~.catalog__control {
+    color: $base-grey;
+    cursor: none;
+
+    &:hover {
+      color: $base-grey;
+    }
+  }
+}
+
+.catalog__control-input[type="radio"]:checked:active + .catalog__control-mark::before {
+  background-color: $base-purple;
 }
 
 .catalog__toggle-input {
@@ -140,10 +180,9 @@
   align-items: center;
   min-height: 24px;
 
-  // Стили для disabled состояния
   &:has(input[disabled]) {
     opacity: 0.5;
-    cursor: not-allowed;
+    cursor: none;
   }
 }
 
@@ -172,25 +211,22 @@
   }
 }
 
-// Стили для checked состояния
-.catalog__toggle-label input[type="checkbox"]:checked+.catalog__toggle-slider {
+.catalog__toggle-label input[type="checkbox"]:checked + .catalog__toggle-slider {
   background-color: $base-purple;
 
   &::before {
-    left: calc(100% - 22px); // Смещение кружка вправо
+    left: calc(100% - 22px);
     transform: translateY(-50%);
   }
 }
 
-// Стили для focus состояния
-.catalog__toggle-label input[type="checkbox"]:focus+.catalog__toggle-slider {
+.catalog__toggle-label input[type="checkbox"]:focus + .catalog__toggle-slider {
   box-shadow: 0 0 0 2px rgba($base-purple, 0.3);
 }
 
-// Стили для disabled состояния
-.catalog__toggle-label input[type="checkbox"]:disabled+.catalog__toggle-slider {
+.catalog__toggle-label input[type="checkbox"]:disabled + .catalog__toggle-slider {
   opacity: 0.5;
-  cursor: not-allowed;
+  cursor: none;
 }
 
 .catalog__form-buttons {
@@ -214,11 +250,28 @@
 .catalog__reset-button {
   color: $base-purple;
   background-color: $base-white;
+
+  &:hover,
+  &:focus {
+    background-color: $base-purple-lighter;
+    color: $base-white;
+  }
+
+  &:active {
+    background-color: $base-purple-darker;
+    color: $base-white;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+    color: $base-white;
+    cursor: none;
+  }
 }
 
 .catalog__select-container {
   display: flex;
-  gap: 8px;
+  gap: 5px;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
@@ -226,6 +279,7 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 26px;
     justify-content: flex-end;
+    gap: 10px;
   }
 
   @media (min-width: $desktop-width) {
@@ -237,7 +291,7 @@
 .catalog__select-title {
   font-size: 16px;
   line-height: 24px;
-  font-weight: 600px;
+  font-weight: 600;
   margin: 0;
 }
 
@@ -250,6 +304,13 @@
   line-height: 24px;
   font-weight: 600;
   color: $base-purple;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $base-light-purple;
+  }
 
   @media (min-width: $tablet-width) {
     padding-left: 11px;
@@ -272,13 +333,24 @@
     background-position: center;
     background-repeat: no-repeat;
     top: 15px;
-    right: 10px;
+    right: 5px;
     color: $base-purple;
+    transition: transform 0.3s ease;
+    pointer-events: none;
+
+    @media (min-width: $tablet-width) {
+      top: 13px;
+      right: 10px;
+    }
 
     @media (min-width: $desktop-width) {
       top: 10px;
     }
   }
+}
+
+.catalog__select-container:has(.catalog__select-control:focus) .catalog__select-wrapper::after {
+  transform: rotate(180deg);
 }
 
 .catalog__desktop-wrapper {

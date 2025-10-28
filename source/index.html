@@ -11,6 +11,10 @@
   <link rel="preload" href="fonts/Montserrat-Regular.woff2" type="font/woff2" as="font">
   <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="favicons/180.png">
+  <link rel="manifest" href="manifest.webmanifest.json">
   <script src="scripts/index.js" defer></script>
 </head>
 
@@ -138,28 +142,32 @@
           </div>
         </div>
       </div>
-      <button class="button slider slider__button slider__button--prev slider-button-prev" type="button">
-        <svg class="slider__left-button" width="20" height="20">
-          <use href="icons/stack.svg#slider-left"></use>
-        </svg>
-        <span class="visually-hidden">Посмотреть предыдущий слайд</span>
-      </button>
-      <button class="button slider slider__button slider__button--next slider-button-next" type="button">
-        <svg class="slider__right-button" width="20" height="20">
-          <use href="icons/stack.svg#slider-right"></use>
-        </svg>
-        <span class="visually-hidden">Посмотреть следующий слайд</span>
-      </button>
-      <div class="hero__pagination slider slider__pagination slider-pagination">
-        <button class="slider__pagination-button slider__pagination-button--active" type="button">
-          <span class="visually-hidden">Кнопка пагинации</span>
+      <div class="slider">
+        <button class="button slider__button slider__button--prev slider-button-prev" type="button">
+          <svg class="slider__left-button" width="20" height="20">
+            <use href="icons/stack.svg#slider-left"></use>
+          </svg>
+          <span class="visually-hidden">Посмотреть предыдущий слайд</span>
         </button>
-        <button class="slider__pagination-button" type="button">
-          <span class="visually-hidden">Кнопка пагинации</span>
+        <button class="button slider__button slider__button--next slider-button-next" type="button">
+          <svg class="slider__right-button" width="20" height="20">
+            <use href="icons/stack.svg#slider-right"></use>
+          </svg>
+          <span class="visually-hidden">Посмотреть следующий слайд</span>
         </button>
-        <button class="slider__pagination-button" type="button">
-          <span class="visually-hidden">Кнопка пагинации</span>
-        </button>
+      </div>
+      <div class="slider">
+        <div class="hero__pagination slider__pagination slider-pagination">
+          <button class="slider__pagination-button slider__pagination-button--active" type="button">
+            <span class="visually-hidden">Кнопка пагинации</span>
+          </button>
+          <button class="slider__pagination-button" type="button">
+            <span class="visually-hidden">Кнопка пагинации</span>
+          </button>
+          <button class="slider__pagination-button" type="button">
+            <span class="visually-hidden">Кнопка пагинации</span>
+          </button>
+        </div>
       </div>
     </section>
     <section class="features" data-test="features">
@@ -218,7 +226,7 @@
                   </div>
                   <div class="catalog__wrapper-inputs input">
                     <div class="input__wrapper">
-                      <input class="input__range input__range--min" id="range-input-minimum" type="number" value="0" name="min-price">
+                      <input class="input__range input__range--min" id="range-input-minimum" type="number" value="0" name="min-price" min="0" max="1000">
                       <label class="input__label" for="range-input-minimum">
                         <span class="visually-hidden">от</span>
                       </label>
@@ -227,7 +235,7 @@
                       <span class="visually-hidden">Тире</span>
                     </div>
                     <div class="input__wrapper">
-                      <input class="input__range input__range--max" id="range-input-maximum" type="number" value="900" name="max-price">
+                      <input class="input__range input__range--max" id="range-input-maximum" type="number" value="900" name="max-price" min="0" max="1000">
                       <label class="input__label" for="range-input-maximum">
                         <span class="visually-hidden">до</span>
                       </label>
@@ -262,7 +270,7 @@
                     </li>
                     <li class="catalog__filter-item">
                       <label class="catalog__control">
-                        <input class="catalog__control-input visually-hidden" type="radio" name="milk" value="without-milk">
+                        <input class="catalog__control-input visually-hidden" type="radio" name="milk" value="without-milk" disabled>
                         <span class="catalog__control-mark"></span>
                         Без молока
                       </label>

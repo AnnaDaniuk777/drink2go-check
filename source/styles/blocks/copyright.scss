@@ -23,6 +23,24 @@
 .copyright__link {
   padding-right: 16px;
   position: relative;
+  transition: color 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $base-purple;
+
+    &::after {
+      background-color: $base-purple;
+    }
+  }
+
+  &:active {
+    color: $base-purple-darker;
+
+    &::after {
+      background-color: $base-purple-darker;
+    }
+  }
 
   &::after {
     @include pseudo;

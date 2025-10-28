@@ -14,14 +14,30 @@
 
   @media (min-width: $tablet-width) {
     margin: 0 30px;
+    padding-bottom: 188px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 0;
   }
 }
 
 .slider__button--prev {
   left: 0;
 
+  &:hover,
+  :focus {
+    background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:active {
+    background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+
   &:disabled {
+    background: transparent;
     opacity: 0.5;
+    cursor: none;
   }
 
   @media (min-width: 1440px) {
@@ -36,8 +52,19 @@
     right: calc(50% - 720px);
   }
 
+  &:hover,
+  :focus {
+    background: linear-gradient(-90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:active {
+    background: linear-gradient(-90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+
   &:disabled {
+    background: transparent;
     opacity: 0.5;
+    cursor: none;
   }
 }
 
@@ -71,6 +98,16 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: $base-purple-opacity;
+  }
+
+  &:active {
+    background-color: $base-purple;
+  }
 
   &::after {
     @include pseudo;
@@ -79,12 +116,17 @@
     width: 100%;
     height: 100%;
     background-color: $base-purple;
-    transition: none;
+    transition: left 0.3s ease-in-out;
   }
 
   &--active {
     &::after {
       left: 0;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $base-white;
     }
   }
 }

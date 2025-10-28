@@ -27,6 +27,25 @@
   padding: 8px 10px;
   border: 2px solid $base-purple-lighter;
   border-radius: 4px;
+  background-color: $base-white;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  color: $base-black;
+
+  &:out-of-range {
+    color: $base-grey;
+  }
+
+  &:focus {
+    border-color: $base-purple-darker;
+    outline: none;
+  }
+
+  &:disabled {
+    border-color: $base-grey-light;
+    background-color: $background-light-grey;
+    color: $base-grey;
+    cursor: none;
+  }
 
   &--min {
     margin-right: 18px;
